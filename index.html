@@ -7,16 +7,52 @@
     <meta property="og:title" content="PandaMarket" />
     <meta
       property="og:description"
-      content="세상의 모든 정보를 쉽게 저장하고 관리해 보세요"
+      content="일상의 모든 물건을 거래해 보세요"
     />
 
     <title>판다마켓</title>
+    <link rel="stylesheet" href="./src/style/reset.css" />
     <link rel="stylesheet" href="./src/style/index.css" type="text/css" />
   </head>
   <body>
-    <header class="header">
-      <nav class="header_nav" role="navigation">상단 nav bar영역</nav>
+    <nav class="header_nav" role="navigation">
+      <a href="/">
+        <img
+          src="src/assets/svg/Logo-Large.svg"
+          alt="판다마켓로고"
+          class="navLogo"
+        />
+      </a>
+      <div class="header_category">
+        <a class="category_btn" href="/#">자유게시판</a>
+        <a class="category_btn" href="/#">중고마켓</a>
+      </div>
+      <a class="login_btn" href="/QA-sprint-mission/pages/signin.html"
+        >로그인</a
+      >
+    </nav>
+    <header class="header_intro">
+      <div class="header_wrapper">
+        <h1 class="header_title">
+          일상의 모든 물건을<br />
+          거래해보세요
+        </h1>
+        <!-- <div class="header_btn_container"> -->
+        <a href="/QA-sprint-mission/pages/items.html" class="header_btn"
+          >구경하러가기
+        </a>
+        <!-- </div> -->
+      </div>
+      <div class="header_img-container">
+        <img
+          src="src/assets/image/header-content-image.png"
+          alt="헤더 이미지"
+          width="996"
+          height="417"
+        />
+      </div>
     </header>
+
     <main id="main">
       <section>컨텐츠 내용내용</section>
     </main>
