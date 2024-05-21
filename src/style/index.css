@@ -1,1 +1,89 @@
-/* 파일생성을 위한 주석 */
+@import "./reset.css";
+
+/* header */
+
+.header_nav {
+  max-width: 192rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  top: 0;
+
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--White);
+}
+
+.header_category {
+  margin-left: 3.2rem;
+}
+
+.category_btn {
+  padding: 2.4rem 1.6rem;
+}
+
+.login_btn {
+  padding: 1.2rem 2.3rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: row;
+
+  background: var(--Brand-Blue);
+  color: var(--White);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.header_intro {
+  width: 100%;
+  height: 54rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #cfe5ff;
+}
+
+.header_title {
+  padding-right: 6.2rem;
+
+  color: var(--Cool-Gray700);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.header_btn {
+  margin-top: 3.2rem;
+  padding: 1.6rem 12.4rem;
+  border-radius: 4rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--Brand-Blue);
+  color: var(--White);
+
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_img-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
