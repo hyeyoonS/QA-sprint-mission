@@ -18,6 +18,7 @@
 .header_category {
   width: 100%;
   margin-left: 3.2rem;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -25,10 +26,12 @@
 
 .category_btn {
   padding: 2.4rem 1.6rem;
+
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
   color: var(--Cool-Gray600);
 }
 
@@ -61,6 +64,7 @@
 .header_container {
   width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,10 +106,11 @@
 
 .header_img-container {
   margin-left: -1.4rem;
-  display: flex;
-  flex-direction: row;
   padding-top: 3rem;
   margin-top: 9.3rem;
+
+  display: flex;
+  flex-direction: row;
 }
 
 /* section */
@@ -123,8 +128,7 @@ section {
 
 .section-container {
   width: 100%;
-  height: 55rem;
-  margin: 13.8rem 0;
+  padding: 13.8rem 0;
 
   display: flex;
   flex-direction: column;
@@ -154,21 +158,34 @@ section {
   align-items: flex-start;
 }
 
+.section_badge {
+  color: var(--brand-blue, #3692ff);
+  font-family: Pretendard;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
 .sectionTitle {
-  color: var(--Cool-Gray700);
+  margin-top: 1.2rem;
+  margin-bottom: 2.4rem;
+
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
   letter-spacing: 0.08rem;
+  color: var(--Cool-Gray700);
 }
 
 .sectionSummary {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 28.8px */
+  line-height: 120%;
   letter-spacing: 0.192rem;
+  color: var(--Cool-Gray700);
 }
 
 .sectionImg {
@@ -229,7 +246,7 @@ footer {
 
 .sns_icon {
   grid-area: sns_icon;
+  height: 2rem;
   display: flex;
   column-gap: 1.2rem;
-  height: 2rem;
 }
