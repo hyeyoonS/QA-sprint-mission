@@ -3,7 +3,7 @@
 
           
 
- <img src="https://github.com/hyeyoonS/QA-sprint-mission/assets/144667455/42ec4f3b-194e-4a84-b39f-71071851b9c5" width="375" height="540">  <img src="https://github.com/hyeyoonS/QA-sprint-mission/assets/144667455/ef9618ba-5f05-4ad6-bdc9-aefe2cd04505" width="375" height="540">|
+ <img src="https://github.com/hyeyoonS/QA-sprint-mission/assets/144667455/42ec4f3b-194e-4a84-b39f-71071851b9c5" width="375" height="540">  <img src="https://github.com/hyeyoonS/QA-sprint-mission/assets/144667455/ef9618ba-5f05-4ad6-bdc9-aefe2cd04505" width="375" height="540">
 
 
 ---
