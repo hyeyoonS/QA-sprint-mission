@@ -27,6 +27,15 @@
             placeholder="아이디를 입력해주세요"
           />
         </div>
+        <label for="nickname"
+        >닉네임<br />
+        <div class="input-container">
+          <input
+            id="nickname"
+            type="text"
+            placeholder="닉네임을 입력해주세요"
+          />
+        </div>
       </label>
       <label for="password"
         >비밀번호<br />
@@ -43,6 +52,21 @@
           </div>
         </div>
       </label>
+      <label for="password-re"
+      >비밀번호<br />
+      <div class="input-container">
+        <div class="helper">
+          <input
+            id="password-re"
+            type="password"
+            placeholder="비밀번호를 다시 한번 입력해주세요"
+          />
+          <div class="input-eye-off">
+            <img src="/src/assets/svg/eye-close-icon.svg" />
+          </div>
+        </div>
+      </div>
+    </label>
       <button onclick="location.href='./index.html'">로그인</button>
       <div class="another-signup">
         <div class="another-signup-text">간편 로그인하기</div>
@@ -59,8 +83,8 @@
         </div>
       </div>
       <div class="title-subtext">
-        판다마켓이 처음이신가요?
-        <a href="signup.html" class="deco_text">회원가입</a>
+        이미 회원이신가요?
+        <a href="/pages/signin.html" class="deco_text">로그인</a>
       </div>
     </form>
   </body>
