@@ -1,44 +1,22 @@
-### 스프린트 미션 제출 방법
+# 🍀일상의 모든 물건을 거래할 수 있는 판다마켓
 
-- **codeit-bootcamp-backend / QA-sprint-mission** 에서 `fork` 합니다.
-
-  - main branch only 체크를 **해제**합니다.
-
-- `fork` 해 온 repository에서 자신의 담당에 맞는 `백엔드/풀스택` 브랜치를 `clone` 해서 작업합니다.
-
-  ```bash
-  git clone -b 백엔드/풀스택 --single-branch {저장소 URL}
-  ```
-
-- **클론한 폴더 열고, base 브랜치가 `백엔드/풀스택` 브랜치인지 확인합니다.** 만약 그렇지 않다면, 아래 명령어로 base 브랜치를 이동합니다.
-
-  ```bash
-  git checkout 백엔드/풀스택
-  ```
-
-- `백엔드/풀스택` 브랜치를 기준으로 각 미션마다 `백엔드/풀스택-mission번호` 브랜치를 생성합니다.
-
-  ```bash
-  git checkout -b 백엔드/풀스택-mission3
-  ```
-
-- `백엔드/풀스택-mission3` 브랜치에서 해당 스프린트 미션을 진행 후 `push` 합니다.
-
-- 위 과정을 통해 미션을 다 완료했다면, **PR**(Pull Request)을 올립니다.
-
-  -  ex)  `jiwoo-im/백엔드-mission3` → `codeit-bootcamp-backend/백엔드`
+![Frame 2608830](https://github.com/hyeyoonS/QA-sprint-mission/assets/144667455/42ec4f3b-194e-4a84-b39f-71071851b9c5)
 
 
+**✅ [배포 사이트 보러가기](https://hy-pandamarket-1.netlify.app/)**
+- 인기 상품을 **확인**해보세요!
+- 구매를 원하는 상품을 **검색**해보세요!
+- 판매를 원하는 상품을 **등록**해보세요!
 
-### PR 템플릿
 
-```markdown
-### 주요 변경사항
--
--
+<br/>
 
-### QA 의견
--
--
-```
+## 프로젝트 소개
 
+> 이름: 판다마켓 <br>개발 기간 : <br>
+2024.05.17 ~ ing (ver.1.0.0)<br>
+> 
+
+<br>
+
+## 기술 스택
