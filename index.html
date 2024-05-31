@@ -34,27 +34,20 @@
     </script>
   </head>
   <body>
-    <nav class="header_nav" role="navigation">
-      <a href="/">
-        <img
-          src="src/assets/svg/Logo-Large.svg"
-          alt="판다마켓로고"
-          class="navLogo"
-        />
-      </a>
-      <div class="header_category">
-        <a class="category_btn" href="/">자유게시판</a>
-        <a class="category_btn" href="/">중고마켓</a>
+    <nav role="navigation">
+      <div class="header_nav">
+        <a href="/" class="nav_logo" aria-label="판다마켓로고"></a>
+        <div class="header_category">
+          <a class="category_btn" href="/">자유게시판</a>
+          <a class="category_btn" href="/">중고마켓</a>
+        </div>
+        <a class="login_btn" href="/pages/signin.html">로그인</a>
       </div>
-      <a class="login_btn" href="/pages/signin.html">로그인</a>
     </nav>
     <header class="header_section">
       <div class="header_container">
         <div class="header_wrapper">
-          <h1 class="header_title">
-            일상의 모든 물건을<br />
-            거래해보세요
-          </h1>
+          <h1 class="header_title">일상의 모든 물건을 거래해보세요</h1>
           <a href="/pages/items.html" class="header_btn">구경하러가기 </a>
         </div>
         <div class="header_img_container">
@@ -70,7 +63,7 @@
 
     <main id="main">
       <section class="section_container_left">
-        <div class="section_wrapper">
+        <div class="section_wrapper left">
           <img
             src="/src/assets/image/home_01-image.png"
             alt="link_save_img"
@@ -93,7 +86,7 @@
       </section>
 
       <section class="section_container_right">
-        <div class="section_wrapper">
+        <div class="section_wrapper right">
           <div class="text_content_left">
             <div class="section_badge">Search</div>
             <span class="section_title">
@@ -116,7 +109,7 @@
       </section>
 
       <section class="section_container_left">
-        <div class="section_wrapper">
+        <div class="section_wrapper left">
           <img
             src="/src/assets/image/home_03-image.png"
             alt="social_media_share_img"
