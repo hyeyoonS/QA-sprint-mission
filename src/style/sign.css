@@ -10,10 +10,18 @@ body {
 form {
   width: 64rem;
   margin-top: 6rem;
+  margin-bottom: 41.8rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 40rem;
+    margin-top: 4.8rem;
+    margin-bottom: 38rem;
+  }
 }
 
 header {
@@ -23,11 +31,20 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 767px) {
+    margin-bottom: 2.4rem;
+  }
 }
 
 .title-logo {
   width: 39.6rem;
   height: 13.2rem;
+
+  @media (max-width: 767px) {
+    width: 19.8rem;
+    height: 6.6rem;
+  }
 }
 
 .title-logo img {
@@ -55,6 +72,11 @@ label {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 21.48px;
+
+  @media (max-width: 767px) {
+    max-width: 40rem;
+    padding: 0 1.6rem;
+  }
 }
 
 button {
@@ -72,6 +94,14 @@ button {
   background: var(--Cool-Gray400);
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+.padding_helper {
+  width: 100%;
+
+  @media (max-width: 767px) {
+    padding: 0 1.6rem;
+  }
 }
 
 .input-container {
