@@ -174,3 +174,34 @@ input:focus {
   text-decoration-line: underline;
   color: var(--Brand-Blue);
 }
+
+#eyeImage-password,
+#eyeImage-password-re {
+  position: absolute;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.email-error-message {
+  padding-top: 6px;
+  color: var(--error-red);
+  display: none;
+}
+
+.password-error-message {
+  padding-top: 6px;
+  color: var(--error-red);
+  display: none;
+}
+
+.password-re-error-message {
+  padding-top: 6px;
+  color: var(--error-red);
+}
+
+.error-border {
+  border: 0.2rem var(--error-red);
+}

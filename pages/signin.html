@@ -26,6 +26,7 @@
             type="email"
             placeholder="아이디를 입력해주세요"
           />
+          <div class="email-error-message">이메일을 입력해주세요.</div>
         </div>
       </label>
       <label for="password"
@@ -38,10 +39,13 @@
               placeholder="비밀번호를 입력해주세요"
             />
             <div class="input-eye-off">
-              <img src="/src/assets/svg/eye-close-icon.svg" />
+              <div id="eyeImage-password">
+                <img src="/src/assets/svg/eye-close-icon.svg" />
+              </div>
             </div>
           </div>
         </div>
+        <div class="password-error-message">비밀번호를 입력해주세요.</div>
       </label>
       <div class="padding_helper">
         <button onclick="location.href='./index.html'">로그인</button>
@@ -71,4 +75,5 @@
       </div>
     </form>
   </body>
+  <script type="module" src="../scripts/signin.js"></script>
 </html>
