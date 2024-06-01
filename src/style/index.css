@@ -4,7 +4,6 @@
 nav {
   width: 100%;
   background-color: var(--White);
-  position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
   z-index: 999;
@@ -26,6 +25,8 @@ nav {
 }
 
 .header_nav {
+  top: 0;
+  position: sticky;
   max-width: 192rem;
   margin: auto;
   padding-left: 20rem;
@@ -124,7 +125,17 @@ nav {
 
   @media (min-width: 768px) and (max-width: 1199px) {
     display: flex;
-    /* padding-top: 9.4rem; */
+    /* margin-top: 6rem; */
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+  }
+}
+
+.bottom_header_section .header_container {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    /* margin-top: 9.4rem; */
     flex-direction: column;
     justify-content: normal;
     align-items: normal;
@@ -184,7 +195,7 @@ nav {
 
 .header_wrapper {
   width: 35.7rem;
-  height: 20rem;
+  /* height: 20rem; */
 
   display: flex;
   flex-direction: column;
@@ -197,7 +208,18 @@ nav {
   @media (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     width: 100%;
-    height: 13.6rem;
+    padding: 9.4rem 0;
+    position: relative;
+    left: 0;
+    align-items: center;
+  }
+}
+
+.bottom .header_title {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    width: 100%;
+    padding: 6rem 0;
     position: relative;
     left: 0;
     align-items: center;
@@ -206,8 +228,7 @@ nav {
 
 .header_img_container {
   padding-top: 3rem;
-  margin-top: 9.3rem;
-
+  margin-bottom: -9.1rem;
   display: flex;
   position: absolute;
   flex-direction: row;
@@ -215,7 +236,8 @@ nav {
   right: 22.3rem;
 
   @media (min-width: 768px) and (max-width: 1199px) {
-    padding-top: 9.4rem;
+    display: flex;
+    padding-top: 3rem;
     margin: 0 auto;
     position: relative;
     justify-content: center;
@@ -225,6 +247,7 @@ nav {
 }
 
 .header_img_container img {
+  width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
@@ -386,6 +409,19 @@ section {
 .bottom_header_img_container {
   display: flex;
   flex-direction: row;
+  margin-bottom: -6.8rem;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.bottom_header_img_container img {
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .bottom_header_section {
@@ -399,7 +435,7 @@ section {
 
   @media (min-width: 768px) and (max-width: 1199px) {
     height: 77.1rem;
-    padding-top: 6rem;
+    /* padding-top: 6rem; */
     margin-top: 4rem;
   }
 }
@@ -416,7 +452,7 @@ footer {
 
   background-color: var(--Cool-Gray900);
 
-  @media (max-width: 375px) {
+  @media (min-width: 375px) and (max-width: 767px) {
     height: 16rem;
   }
 }
