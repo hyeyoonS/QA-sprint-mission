@@ -207,22 +207,31 @@ input:focus {
 }
 
 .email-error-message {
-  padding-top: 6px;
+  padding-top: 0.8rem;
+  padding-left: 1.6rem;
+
+  font-size: 1.5rem;
   color: var(--error-red);
   display: none;
 }
 
 .password-error-message {
-  padding-top: 6px;
+  padding-top: 0.8rem;
+  padding-left: 1.6rem;
+
+  font-size: 1.5rem;
   color: var(--error-red);
   display: none;
 }
 
 .password-re-error-message {
-  padding-top: 6px;
+  padding-top: 0.8rem;
+  padding-left: 1.6rem;
+
+  font-size: 1.5rem;
   color: var(--error-red);
 }
 
 .error-border {
-  border: 0.2rem var(--error-red);
+  border: 0.12rem var(--error-red);
 }
