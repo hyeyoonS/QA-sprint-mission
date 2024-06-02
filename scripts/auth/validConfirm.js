@@ -7,12 +7,12 @@ import {
   passwordErrorMessage,
 } from "../constants.js";
 
-// <아이디&비밀번호 올바르게 입력했을 경우 /folder로 이동하고 아닌 경우 확인메시지 출력>
+// <아이디&비밀번호 올바르게 입력했을 경우 /items로 이동하고 아닌 경우 확인메시지 출력>
 function validAccount(email, password) {
   const accountMatch = USER_DATA.find((account) => account.email === email);
 
   if (accountMatch?.password === password) {
-    window.location.href = "./folder.html";
+    window.location.href = "./items.html";
   }
 
   if (accountMatch?.password !== password) {

@@ -5,8 +5,12 @@ import {
 } from "./errors/errors.js";
 import { toggleImage } from "./toggleImage.js";
 import { checkPassword } from "./input/checkPassword.js";
-import { inputEmail, inputPassword } from "./constants.js";
-// import { checkSignupEmail } from "./input/checkSignupEmail.js";
+import {
+  inputEmail,
+  inputPassword,
+  emailErrorMessage,
+  passwordErrorMessage,
+} from "./constants.js";
 import { checkEmailFormat } from "./input/checkEmailFormat.js";
 
 console.log("실행되나?");
@@ -31,16 +35,32 @@ eyeImagePasswordRe.addEventListener("click", () => {
 });
 
 //<입력하는 동안에는 에러메시지 안 보이게 하기 >
-inputEmail.addEventListener("input", errorMessageStop);
-inputPassword.addEventListener("input", errorMessageStop);
+inputEmail.addEventListener("input", () => {
+  errorMessageStop();
+  validateForm();
+});
+inputPassword.addEventListener("input", () => {
+  errorMessageStop();
+  validateForm();
+});
+inputPasswordRe.addEventListener("input", () => {
+  errorMessageStop();
+  validateForm();
+});
 
 //<이메일 형식 검증>
-inputEmail.addEventListener("focusout", checkEmailFormat);
+inputEmail.addEventListener("focusout", () => {
+  checkEmailFormat();
+  validateForm();
+});
 
 //<비밀번호 형식 검증>
-inputPassword.addEventListener("focusout", checkPassword);
+inputPassword.addEventListener("focusout", () => {
+  checkPassword();
+  validateForm();
+});
 
-//비밀번호-비밀번호 확인 값 일치 확인
+// 비밀번호-비밀번호 확인 값 일치 확인
 function checkPasswordRe() {
   const password = inputPassword.value;
   const passwordRe = inputPasswordRe.value;
@@ -50,6 +70,7 @@ function checkPasswordRe() {
       passwordReErrorMessage,
       "비밀번호가 일치하지 않아요."
     );
+    return false;
   } else {
     removeErrorStyle(inputPasswordRe, passwordReErrorMessage);
     return true;
@@ -57,16 +78,37 @@ function checkPasswordRe() {
 }
 inputPasswordRe.addEventListener("focusout", checkPasswordRe);
 
-//이메일&비밀번호 모두 유효한 값이라면 버튼 동작하도록 함
+// 폼 유효성 검사 및 버튼 상태 업데이트
+function validateForm() {
+  const isEmailValid =
+    inputEmail.value.trim() !== "" && emailErrorMessage.textContent === "";
+  const isPasswordValid =
+    inputPassword.value.trim() !== "" &&
+    passwordErrorMessage.textContent === "";
+  const isPasswordReValid =
+    inputPasswordRe.value.trim() !== "" &&
+    passwordReErrorMessage.textContent === "";
+
+  submitButton.disabled = !(
+    isEmailValid &&
+    isPasswordValid &&
+    isPasswordReValid
+  );
+}
+
+// 이메일과 비밀번호 모두 유효한 값이라면 버튼 동작하도록 함
 function submitAccount() {
   const isEmailValid = checkEmailFormat();
   const isPasswordValid = checkPassword();
   const isPasswordReValid = checkPasswordRe();
 
+  console.log("submitAccount작동했나?");
   if (isEmailValid && isPasswordValid && isPasswordReValid) {
-    window.location.href = "./index.html";
+    window.location.href = "./itmes.html";
   }
 }
+
+validateForm();
 
 submitButton.addEventListener("click", function (event) {
   event.preventDefault();
@@ -75,7 +117,7 @@ submitButton.addEventListener("click", function (event) {
 
 signupForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const email = inputEmail.value.trim();
-  const password = inputPassword.value;
-  validAccount(email, password);
+  submitAccount();
 });
+
+// 초기 유효성 검사 호출

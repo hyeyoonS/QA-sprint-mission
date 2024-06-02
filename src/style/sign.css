@@ -79,6 +79,25 @@ label {
   }
 }
 
+button:disabled {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  margin: 1.2rem auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--White);
+  border-radius: 4rem;
+  border: none;
+  background: var(--Cool-Gray400);
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  cursor: not-allowed;
+}
+
 button {
   width: 100%;
   padding: 1.6rem 2rem;
@@ -88,12 +107,15 @@ button {
   justify-content: center;
   align-items: center;
 
-  color: #fff;
+  color: var(--White);
   border-radius: 4rem;
   border: none;
-  background: var(--Cool-Gray400);
+  background-color: var(--Brand-Blue);
+
   font-size: 1.8rem;
   font-weight: 600;
+
+  cursor: pointer;
 }
 
 .padding_helper {

@@ -18,7 +18,7 @@ function checkPassword() {
     addErrorStyle(
       inputPassword,
       passwordErrorMessage,
-      "비밀번호는 영문, 숫자 조합 8자 이상 입력해주세요."
+      "비밀번호는 8자 이상 입력해주세요."
     );
   } else {
     removeErrorStyle(inputPassword, passwordErrorMessage);
