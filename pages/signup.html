@@ -27,6 +27,7 @@
             placeholder="아이디를 입력해주세요"
           />
         </div>
+        <div class="email-error-message">이메일을 입력해주세요.</div>
       </label>
       <label for="nickname"
         >닉네임<br />
@@ -37,6 +38,7 @@
             placeholder="닉네임을 입력해주세요"
           />
         </div>
+        <div class="email-error-message">이메일을 입력해주세요.</div>
       </label>
       <label for="password"
         >비밀번호<br />
@@ -48,10 +50,13 @@
               placeholder="비밀번호를 입력해주세요"
             />
             <div class="input-eye-off">
-              <img src="/src/assets/svg/eye-close-icon.svg" />
+              <div id="eyeImage-password">
+                <img src="/src/assets/svg/eye-close-icon.svg" />
+              </div>
             </div>
           </div>
         </div>
+        <div class="password-error-message">비밀번호를 입력해주세요.</div>
       </label>
       <label for="password-re"
         >비밀번호 확인<br />
@@ -63,13 +68,16 @@
               placeholder="비밀번호를 다시 한번 입력해주세요"
             />
             <div class="input-eye-off">
-              <img src="/src/assets/svg/eye-close-icon.svg" />
+              <div id="eyeImage-password-re">
+                <img src="/src/assets/svg/eye-close-icon.svg" />
+              </div>
             </div>
           </div>
         </div>
+        <div class="password-re-error-message"></div>
       </label>
       <div class="padding_helper">
-        <button onclick="location.href='./index.html'">로그인</button>
+        <button type="submit">로그인</button>
       </div>
       <div class="padding_helper">
         <div class="another-signup">
@@ -96,4 +104,5 @@
       </div>
     </form>
   </body>
+  <script type="module" src="../scripts/signup.js"></script>
 </html>
