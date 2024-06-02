@@ -177,7 +177,6 @@ input:focus {
 
 #eyeImage-password,
 #eyeImage-password-re {
-  position: absolute;
   right: 1.5rem;
   display: flex;
   flex-direction: row;
