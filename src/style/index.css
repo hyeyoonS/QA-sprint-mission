@@ -251,6 +251,41 @@ nav {
   }
 }
 
+.bottom_header_wrapper {
+  width: 35.7rem;
+  /* height: 20rem; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 36rem;
+
+  z-index: 1;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    /* display: flex; */
+    width: 100%;
+    padding: 9.4rem 0;
+    position: relative;
+    left: 0;
+    align-items: center;
+  }
+
+  @media (max-width: 767px) {
+    /* display: flex; */
+    width: 100%;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    /* position: relative; */
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    /* left: 0; */
+    align-items: center;
+  }
+}
+
 .bottom .header_title {
   @media (min-width: 768px) and (max-width: 1199px) {
     display: flex;
@@ -518,18 +553,55 @@ section {
   display: flex;
   flex-direction: row;
   margin-bottom: -6.8rem;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: flex-end;
 
   @media (min-width: 768px) and (max-width: 1199px) {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    margin: 0 auto;
+    position: relative;
     justify-content: center;
     align-items: flex-end;
+    right: 0;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    /* position: relative; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    justify-content: center;
+    align-items: flex-end;
+    right: 0;
+    height: 262px;
+    overflow: hidden;
   }
 }
 
 .bottom_header_img_container img {
+  width: 996px;
+  height: 472px;
   overflow: hidden;
   object-fit: cover;
+
+  @media (max-width: 767px) {
+    display: flex;
+    width: 498px;
+    height: 270px;
+    padding-top: 34.042px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
 }
 
 .bottom_header_section {
@@ -560,7 +632,8 @@ footer {
 
   background-color: var(--Cool-Gray900);
 
-  @media (min-width: 375px) and (max-width: 767px) {
+  @media (max-width: 767px) {
+    padding-top: 0;
     height: 16rem;
   }
 }
@@ -575,12 +648,12 @@ footer {
   grid-template: "copyright explain sns_icon";
   justify-content: space-between;
 
-  @media (min-width: 375px) and (max-width: 767px) {
-    margin-top: 4rem;
+  @media (max-width: 767px) {
+    /* margin-top: 4rem; */
     padding: 3.2rem;
     display: grid;
     grid-template-areas:
-      "explain sns-logo"
+      "explain sns_icon"
       "copyright .";
     row-gap: 6rem;
     justify-content: space-around;

@@ -1,7 +1,5 @@
 export function showModal(message) {
-  console.log("showmodal출력1");
   const modal = document.getElementById("error-modal");
-  console.log("showmodal출력2");
   const modalMessage = document.getElementById("modal-message");
   if (modal && modalMessage) {
     modalMessage.textContent = message;
@@ -9,7 +7,6 @@ export function showModal(message) {
   }
 
   document.body.classList.add("modal-open");
-  console.log("showmodal출력3");
 }
 
 export function hideModal() {
