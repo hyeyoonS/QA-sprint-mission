@@ -28,9 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
 
-  // 모달을 body에 추가
+  // 모달을 body에 추가하고 최초에 숨김처리
   document.body.appendChild(modal);
-  // 페이지가 로드될 때 모달 숨김처리
   hideModal();
 
   // confirmButton 클릭 시 모달 숨기기
@@ -46,8 +45,6 @@ function validateForm() {
     passwordErrorMessage.textContent === "";
   submitButton.disabled = !(emailValid && passwordValid);
 }
-
-console.log("1번");
 
 // 눈모양 아이콘 클릭 시 비밀번호 입력타입 변경 및 폼 유효성 검사
 eyeImagePassword.addEventListener("click", () => {
@@ -80,8 +77,6 @@ inputPassword.addEventListener("focusout", () => {
 // 모달 초기 숨김 상태 및 유효성 검사 호출
 validateForm();
 
-console.log("2번");
-
 // 로그인 폼 제출 시 계정 유효성 검사 및 모달 표시
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -89,12 +84,9 @@ loginForm.addEventListener("submit", function (event) {
   const password = inputPassword.value;
   const isValid = validAccount(email, password);
 
-  console.log("3번");
-
   if (!isValid) {
     showModal("존재하지 않는 이메일, 혹은 비밀번호입니다");
   }
-  console.log("4번");
 });
 
 // 페이지 로드 시 초기 유효성 검사 호출
