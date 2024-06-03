@@ -17,6 +17,27 @@ const eyeImagePassword = eyeImagePasswordEl.children[0];
 const submitButton = document.querySelector('button[type="submit"]');
 const loginForm = document.querySelector("form");
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.createElement("div");
+  modal.id = "error-modal";
+  modal.className = "modal";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <button id="confirm-button" class="confirm-button">확인</button>
+    </div>
+  `;
+
+  // 모달을 body에 추가
+  document.body.appendChild(modal);
+  // 페이지가 로드될 때 모달 숨김처리
+  hideModal();
+
+  // confirmButton 클릭 시 모달 숨기기
+  const confirmButton = document.getElementById("confirm-button");
+  confirmButton.addEventListener("click", hideModal);
+});
+
 function validateForm() {
   const emailValid =
     inputEmail.value.trim() !== "" && emailErrorMessage.textContent === "";
@@ -26,13 +47,15 @@ function validateForm() {
   submitButton.disabled = !(emailValid && passwordValid);
 }
 
-//<눈모양 아이콘 적용, 비밀번호 입력타입 변경>
+console.log("1번");
+
+// 눈모양 아이콘 클릭 시 비밀번호 입력타입 변경 및 폼 유효성 검사
 eyeImagePassword.addEventListener("click", () => {
   toggleImage(eyeImagePassword, inputPassword);
-  validateForm(); // validate form on toggle
+  validateForm();
 });
 
-//<입력하는 동안에는 에러메시지 안 보이게 하기 >
+// 입력 중에는 에러 메시지 숨기기
 inputEmail.addEventListener("input", () => {
   errorMessageStop();
   validateForm();
@@ -42,34 +65,40 @@ inputPassword.addEventListener("input", () => {
   validateForm();
 });
 
-// <이메일 형식검증, 오류메시지 출력>
+// 이메일 형식 검증 및 에러 메시지 출력
 inputEmail.addEventListener("focusout", () => {
   checkEmailFormat();
   validateForm();
 });
 
-//<비밀번호 빈 값일때 오류메시지 출력>
+// 비밀번호 빈 값일 때 에러 메시지 출력
 inputPassword.addEventListener("focusout", () => {
   checkPassword();
   validateForm();
 });
 
+// 모달 초기 숨김 상태 및 유효성 검사 호출
 validateForm();
 
-submitButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  const email = inputEmail.value.trim();
-  const password = inputPassword.value;
-  validAccount(email, password);
-});
+console.log("2번");
 
+// 로그인 폼 제출 시 계정 유효성 검사 및 모달 표시
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const email = inputEmail.value.trim();
   const password = inputPassword.value;
-  validAccount(email, password);
+  const isValid = validAccount(email, password);
+
+  console.log("3번");
+
+  if (!isValid) {
+    showModal("존재하지 않는 이메일, 혹은 비밀번호입니다");
+  }
+  console.log("4번");
 });
 
 // 페이지 로드 시 초기 유효성 검사 호출
-validateForm();
-hideModal();
+document.addEventListener("DOMContentLoaded", () => {
+  hideModal();
+  validateForm();
+});
