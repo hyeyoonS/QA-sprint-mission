@@ -6,9 +6,11 @@ import {
   inputPassword,
   emailErrorMessage,
   passwordErrorMessage,
+  USER_DATA,
 } from "./constants.js";
 import { checkEmailFormat } from "./input/checkEmailFormat.js";
 import { validAccount } from "./auth/validConfirm.js";
+import { hideModal, showModal } from "./components/modal.js";
 
 const eyeImagePasswordEl = document.querySelector("#eyeImage-password");
 const eyeImagePassword = eyeImagePasswordEl.children[0];
@@ -68,13 +70,6 @@ loginForm.addEventListener("submit", function (event) {
   validAccount(email, password);
 });
 
-// 자동로그인
-// window.addEventListener("load", () => {
-//   const storedAccessToken = localStorage.getItem("accessToken");
-//   if (storedAccessToken) {
-//     window.location.href = "/itmes";
-//   }
-// });
-
 // 페이지 로드 시 초기 유효성 검사 호출
 validateForm();
+hideModal();
