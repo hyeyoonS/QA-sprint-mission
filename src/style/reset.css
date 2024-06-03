@@ -29,7 +29,6 @@ body {
   position: relative;
   background-color: --var(--White);
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 button {
