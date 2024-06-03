@@ -13,20 +13,9 @@ import { showModal } from "../components/modal.js";
 function validAccount(email, password) {
   const accountMatch = USER_DATA.find((account) => account.email === email);
 
-  //   if (accountMatch) {
-  //     if (accountMatch.password === password) {
-  //       window.location.href = "./items.html"; //
-  //     } else {
-  //       alert("존재하지 않는 이메일, 혹은 비밀번호입니다.");
-  //     }
-  //   } else {
-  //     alert("존재하지 않는 이메일, 혹은 비밀번호입니다.");
-  //   }
-  // }
-
   if (accountMatch) {
     if (accountMatch.password === password) {
-      window.location.href = "./items.html"; // Redirect to /items.html
+      window.location.href = "./items.html";
     } else {
       showModal("존재하지 않는 이메일, 혹은 비밀번호입니다.");
     }

@@ -13,8 +13,6 @@ import {
 } from "./constants.js";
 import { checkEmailFormat } from "./input/checkEmailFormat.js";
 
-console.log("실행되나?");
-
 const eyeImagePasswordEl = document.querySelector("#eyeImage-password");
 const eyeImagePasswordReEl = document.querySelector("#eyeImage-password-re");
 const eyeImagePassword = eyeImagePasswordEl.children[0];
@@ -102,7 +100,6 @@ function submitAccount() {
   const isPasswordValid = checkPassword();
   const isPasswordReValid = checkPasswordRe();
 
-  console.log("submitAccount작동했나?");
   if (isEmailValid && isPasswordValid && isPasswordReValid) {
     window.location.href = "./itmes.html";
   }
@@ -119,5 +116,3 @@ signupForm.addEventListener("submit", function (event) {
   event.preventDefault();
   submitAccount();
 });
-
-// 초기 유효성 검사 호출
