@@ -7,6 +7,8 @@ export function showModal(message) {
     modalMessage.textContent = message;
     modal.style.display = "block";
   }
+
+  document.body.classList.add("modal-open");
   console.log("showmodal출력3");
 }
 
@@ -14,6 +16,7 @@ export function hideModal() {
   const modal = document.getElementById("error-modal");
   if (modal) {
     modal.style.display = "none";
+    document.body.classList.remove("modal-open");
   }
 }
 

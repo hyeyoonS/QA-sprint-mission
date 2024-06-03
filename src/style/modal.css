@@ -1,5 +1,9 @@
 @import "./reset.css";
 
+body.modal-open {
+  overflow: hidden; /* 모달이 열릴 때 스크롤 비활성화 */
+}
+
 .modal {
   display: none;
   position: fixed;
