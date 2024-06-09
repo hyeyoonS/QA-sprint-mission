@@ -1,0 +1,31 @@
+section {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding: 0 2.4rem;
+  }
+
+  @media (min-width: 375px) and (max-width: 767px) {
+    padding: 0 1.5rem;
+  }
+}
+
+.title_bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title {
+  color: var(--Cool-Gray900);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.4px;
+}
