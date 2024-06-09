@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import Nav from "./components/Nav";
 import CardList from "components/CardList";
 import getProducts from "utils/api";
+import CardGeneral from "components/cardGeneral/CardGeneralTitle";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -24,7 +25,7 @@ function App() {
   return (
     <div>
       <Nav />
-      <CardList cards={cards} />
+      <CardGeneral cards={cards} />
     </div>
   );
 }
