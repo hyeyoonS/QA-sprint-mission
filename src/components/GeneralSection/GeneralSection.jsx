@@ -14,7 +14,7 @@ const GeneralSection = ({ cards }) => {
   };
 
   return (
-    <section className="section_container">
+    <section className="general_section_container">
       <div className="title_bar">
         <p className="title">판매 중인 상품</p>
         <div className="title_contents">
