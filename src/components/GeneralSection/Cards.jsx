@@ -1,6 +1,6 @@
 import "./Cards.css";
-import defaultImg from "../assets/image/default-image.png";
-import heartIcon from "../assets/svg/heart-icon.svg";
+import defaultImg from "../../assets/image/default-image.png";
+import heartIcon from "../../assets/svg/heart-icon.svg";
 
 export default function Cards({ value }) {
   const { name, price, favoriteCount, images } = value;
@@ -24,7 +24,7 @@ export default function Cards({ value }) {
           <div className="card_title">{name}</div>
           <div className="card_price">{price.toLocaleString()}원</div>
           <div className="card_interest">
-            <img src={heartIcon} alt="하트 아이콘" width="16" height="16" />{" "}
+            <img src={heartIcon} alt="하트 아이콘" width="16" height="16" />
             <div className="card_count">{favoriteCount}</div>
           </div>
         </div>

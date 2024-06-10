@@ -18,14 +18,24 @@ section {
 
 .title_bar {
   width: 100%;
+  height: 4.2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
 }
+
 .title {
   color: var(--Cool-Gray900);
   font-size: 20px;
   font-weight: 700;
-  line-height: 140%; /* 28px */
+  line-height: 140%;
   letter-spacing: 0.4px;
+}
+
+.title_contents {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
