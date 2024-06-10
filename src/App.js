@@ -1,12 +1,14 @@
 // import "./App.css";
 import { useEffect, useState, useCallback } from "react";
 import Nav from "./components/Nav";
-import CardList from "components/CardList";
-import getProducts from "utils/api";
-import CardGeneral from "components/cardGeneral/CardGeneralTitle";
+import { getProducts, getBestProducts } from "utils/api";
+import GeneralSection from "components/GeneralSection/GeneralSection";
+import BestSection from "components/BestSection/BestSection";
+import Footer from "components/Footer";
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [bestCards, setBestCards] = useState([]);
 
   const fetchCards = useCallback(async () => {
     try {
@@ -18,14 +20,27 @@ function App() {
     }
   }, []);
 
+  const fetchBestCards = useCallback(async () => {
+    try {
+      const BestList = await getBestProducts("/products");
+      setBestCards(BestList.list);
+      console.log(BestList.list);
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    }
+  }, []);
+
   useEffect(() => {
     fetchCards();
-  }, [fetchCards]);
+    fetchBestCards();
+  }, [fetchCards, fetchBestCards]);
 
   return (
     <div>
       <Nav />
-      <CardGeneral cards={cards} />
+      <BestSection bestCards={bestCards} />
+      <GeneralSection cards={cards} />
+      <Footer />
     </div>
   );
 }

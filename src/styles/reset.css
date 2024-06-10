@@ -27,7 +27,7 @@
 html,
 body {
   position: relative;
-  background-color: --var(--White);
+  background-color: #fcfcfc;
   font-size: 62.5%;
 }
 
