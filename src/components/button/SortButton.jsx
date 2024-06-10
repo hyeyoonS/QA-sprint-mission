@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SortButton.css";
 import arrowIcon from "../../assets/svg/arrow-down-icon.svg";
+import sortIcon from "../../assets/svg/sort-icon.svg";
 
 const SortButton = ({ children = "최신순", onSortChange }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,6 +21,17 @@ const SortButton = ({ children = "최신순", onSortChange }) => {
         <span>{children}</span>
         <img src={arrowIcon} alt="화살표 아이콘" width="16" height="16" />
       </button>
+
+      {/* 모바일용 */}
+      <img
+        className="mobile_sort_btn"
+        src={sortIcon}
+        onClick={toggleDropdown}
+        alt="정렬 아이콘"
+        width="42"
+        height="42"
+      />
+
       {isDropdownOpen && (
         <ul className="dropdown-menu">
           <li
