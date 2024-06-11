@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./SearchBar.css";
 import searchIcon from "../../assets/svg/search-icon.svg";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar({ onSearch, isSearched }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
@@ -10,6 +10,7 @@ export default function SearchBar({ onSearch }) {
       onSubmit={(e) => {
         e.preventDefault();
         onSearch(searchTerm);
+        isSearched();
       }}
     >
       <fieldset className="search_wrapper">

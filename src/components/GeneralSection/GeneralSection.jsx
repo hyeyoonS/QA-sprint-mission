@@ -8,9 +8,18 @@ import { useState } from "react";
 
 const GeneralSection = ({ cards, onSearch }) => {
   const [sortOption, setSortOption] = useState("최신순");
+  const [isSearchedToggle, setIsSearchedToggle] = useState(false);
+
+  const isSearched = () => {
+    setIsSearchedToggle((prev) => !prev);
+  };
 
   const handleSortChange = (option) => {
     setSortOption(option);
+  };
+
+  const handleSearch = (searchTerm) => {
+    onSearch(searchTerm);
   };
 
   return (
@@ -18,7 +27,7 @@ const GeneralSection = ({ cards, onSearch }) => {
       <div className="title_bar">
         <p className="title">판매 중인 상품</p>
         <div className="title_contents">
-          <SearchBar onSearch={onSearch} />
+          <SearchBar onSearch={handleSearch} isSearched={isSearched} />
           <div className="mobile_container">
             <Button color="blue">상품 등록하기</Button>
             <SortButton onSortChange={handleSortChange}>
@@ -27,7 +36,11 @@ const GeneralSection = ({ cards, onSearch }) => {
           </div>
         </div>
       </div>
-      <CardList cards={cards} sortOption={sortOption} />
+      <CardList
+        cards={cards}
+        sortOption={sortOption}
+        isSearchedToggle={isSearchedToggle}
+      />
     </section>
   );
 };
