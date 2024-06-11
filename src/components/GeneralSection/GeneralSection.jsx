@@ -6,7 +6,7 @@ import Button from "components/button/Button";
 import SortButton from "components/button/SortButton";
 import { useState } from "react";
 
-const GeneralSection = ({ cards }) => {
+const GeneralSection = ({ cards, onSearch }) => {
   const [sortOption, setSortOption] = useState("최신순");
 
   const handleSortChange = (option) => {
@@ -18,7 +18,7 @@ const GeneralSection = ({ cards }) => {
       <div className="title_bar">
         <p className="title">판매 중인 상품</p>
         <div className="title_contents">
-          <SearchBar />
+          <SearchBar onSearch={onSearch} />
           <div className="mobile_container">
             <Button color="blue">상품 등록하기</Button>
             <SortButton onSortChange={handleSortChange}>

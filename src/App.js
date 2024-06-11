@@ -9,6 +9,7 @@ import Footer from "components/Footer";
 function App() {
   const [cards, setCards] = useState([]);
   const [bestCards, setBestCards] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const fetchCards = useCallback(async () => {
     try {
@@ -16,7 +17,7 @@ function App() {
       setCards(productsList.list);
       console.log(productsList.list);
     } catch (error) {
-      console.error("Failed to fetch products:", error);
+      console.error(error);
     }
   }, []);
 
@@ -26,7 +27,7 @@ function App() {
       setBestCards(BestList.list);
       console.log(BestList.list);
     } catch (error) {
-      console.error("Failed to fetch products:", error);
+      console.error(error);
     }
   }, []);
 
@@ -35,11 +36,19 @@ function App() {
     fetchBestCards();
   }, [fetchCards, fetchBestCards]);
 
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
+  const filteredCards = cards.filter((card) =>
+    card.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <Nav />
       <BestSection bestCards={bestCards} />
-      <GeneralSection cards={cards} />
+      <GeneralSection cards={filteredCards} onSearch={handleSearch} />
       <Footer />
     </div>
   );
