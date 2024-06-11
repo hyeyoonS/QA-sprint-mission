@@ -18,7 +18,6 @@
 
 .title_bar {
   width: 100%;
-  /* height: 4.2rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,12 +27,6 @@
   @media (max-width: 767px) {
     position: relative;
     align-items: flex-start;
-    /* display: grid;
-    grid-template-areas:
-      "title add"
-      ". sort";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto; */
   }
 }
 
@@ -47,8 +40,6 @@
   @media (max-width: 767px) {
     padding-top: 0.7rem;
   }
-
-  /* grid-area: title; */
 }
 
 .title_contents {
@@ -78,22 +69,3 @@
     gap: 8px;
   }
 }
-
-/* @media (max-width: 767px) {
-  .title_contents {
-    display: grid;
-    gap: 10px;
-  } */
-
-/* .title_contents > .search_bar {
-    grid-area: search;
-  }
-
-  .title_contents > .add_button {
-    grid-area: add;
-  }
-
-  .title_contents > .sort_button {
-    grid-area: sort;
-  } */
-/* } */
