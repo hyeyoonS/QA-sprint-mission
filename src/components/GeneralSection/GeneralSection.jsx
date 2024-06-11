@@ -19,8 +19,12 @@ const GeneralSection = ({ cards }) => {
         <p className="title">판매 중인 상품</p>
         <div className="title_contents">
           <SearchBar />
-          <Button color="blue">상품 등록하기</Button>
-          <SortButton onSortChange={handleSortChange}>{sortOption}</SortButton>
+          <div className="mobile_container">
+            <Button color="blue">상품 등록하기</Button>
+            <SortButton onSortChange={handleSortChange}>
+              {sortOption}
+            </SortButton>
+          </div>
         </div>
       </div>
       <CardList cards={cards} sortOption={sortOption} />

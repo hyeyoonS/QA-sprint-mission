@@ -1,12 +1,15 @@
+form {
+  @media (min-width: 375px) and (max-width: 767px) {
+    position: absolute;
+    top: calc(100% - 42px);
+  }
+}
 .search_wrapper {
   width: 32.5rem;
   display: flex;
   flex-direction: row;
-  /* display: grid; */
-  /* grid-template-columns: 1.6rem auto; */
-  /* gap: 1rem; */
+
   align-items: center;
-  /* padding: 0.9rem 1.6rem auto; */
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
   padding-left: 1.6rem;
@@ -36,11 +39,3 @@
   border: none;
   background: var(--Cool-Gray100);
 }
-
-/* .link-search--wrapper {
-  padding: 1.3rem 1.6rem;
-}
-
-.link-search--input {
-  font-size: 1.4rem;
-} */

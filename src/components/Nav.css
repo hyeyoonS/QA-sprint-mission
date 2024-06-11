@@ -74,6 +74,7 @@ nav {
 
   @media (min-width: 375px) and (max-width: 767px) {
     font-size: 1.6rem;
+    padding: 2.4rem 0.4rem;
   }
 }
 
