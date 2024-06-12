@@ -15,7 +15,6 @@ function App() {
     try {
       const productsList = await getProducts("/products");
       setCards(productsList.list);
-      console.log(productsList.list);
     } catch (error) {
       console.error(error);
     }
@@ -25,7 +24,6 @@ function App() {
     try {
       const BestList = await getBestProducts("/products");
       setBestCards(BestList.list);
-      console.log(BestList.list);
     } catch (error) {
       console.error(error);
     }
