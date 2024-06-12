@@ -3,6 +3,8 @@ import "./CardList.css";
 import Cards from "./Cards";
 import usePagination from "hooks/usePagination";
 import useWindowSize from "hooks/useWindowSize";
+import arrow_left from "../../assets/svg/arrow_left-icon.svg";
+import arrow_right from "../../assets/svg/arrow_right-icon.svg";
 
 const CardList = ({ cards, sortOption, isSearchedToggle }) => {
   const sortedCards = [...cards].sort((a, b) => {
@@ -37,23 +39,12 @@ const CardList = ({ cards, sortOption, isSearchedToggle }) => {
     goToFirstPage,
   } = usePagination(sortedCards, itemsPerPage());
 
+  // 검색하면 첫번째 페이지로 이동
   useEffect(() => {
     goToFirstPage();
   }, [isSearchedToggle]);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     updateItemsPerPage(itemsPerPage());
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-  //   // goToFirstPage();
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, [updateItemsPerPage, itemsPerPage]);
-
+  //화면 크기에 따라 보여줄 컨텐츠 수를 제어
   useEffect(() => {
     updateItemsPerPage(itemsPerPage());
   }, [width]);
@@ -67,7 +58,11 @@ const CardList = ({ cards, sortOption, isSearchedToggle }) => {
       </div>
       <div className="pagination">
         <button onClick={prevPage} disabled={currentPage === 1}>
-          이전
+          <img
+            src={arrow_left}
+            aria-label="왼쪽화살표"
+            className="arrow_left"
+          />
         </button>
         {Array.from({ length: maxPage }, (_, index) => (
           <button
@@ -79,7 +74,11 @@ const CardList = ({ cards, sortOption, isSearchedToggle }) => {
           </button>
         ))}
         <button onClick={nextPage} disabled={currentPage === maxPage}>
-          다음
+          <img
+            src={arrow_right}
+            aria-label="왼쪽화살표"
+            className="arrow_left"
+          />
         </button>
       </div>
     </div>

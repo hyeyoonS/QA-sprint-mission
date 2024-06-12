@@ -26,7 +26,6 @@ const usePagination = (data, initialItemsPerPage) => {
   };
 
   const updateItemsPerPage = (newItemsPerPage) => {
-    console.log("실행됐냐?", newItemsPerPage);
     setCurrentPage(1);
     setItemsPerPage(newItemsPerPage);
   };

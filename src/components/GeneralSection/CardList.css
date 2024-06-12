@@ -40,6 +40,10 @@
 }
 
 .pagination button:disabled {
-  background-color: #ccc;
   cursor: not-allowed;
+}
+
+.arrow_left {
+  width: 16px;
+  height: 16px;
 }
