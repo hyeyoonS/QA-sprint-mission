@@ -1,7 +1,14 @@
 // import "./App.css";
+import Nav from "components/Nav";
+import Registration from "components/Registeration";
 
 function Register() {
-  return <div> 빈페이지</div>;
+  return (
+    <div>
+      <Nav />
+      <Registration />
+    </div>
+  );
 }
 
 export default Register;
