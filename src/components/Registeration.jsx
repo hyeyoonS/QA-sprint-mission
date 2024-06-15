@@ -8,7 +8,9 @@ function Registration() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    setValue,
+    watch,
+    formState: { errors, isValid },
   } = useForm();
 
   const onSubmit = console.log("제출!!");
@@ -57,25 +59,40 @@ function Registration() {
 
         <fieldset>
           <label>상품명</label>
-          <input type="text" {...register("name", { required: true })} />
+          <input
+            type="text"
+            placeholder="상품명을 입력해주세요"
+            {...register("name", { required: true })}
+          />
           {errors.name && <span>This field is required</span>}
         </fieldset>
 
         <fieldset>
           <label>상품 소개</label>
-          <textarea {...register("description", { required: true })}></textarea>
+          <textarea
+            placeholder="상품 소개를 입력해주세요"
+            {...register("description", { required: true })}
+          ></textarea>
           {errors.description && <span>This field is required</span>}
         </fieldset>
 
         <fieldset>
           <label>판매가격</label>
-          <input type="number" {...register("price", { required: true })} />
+          <input
+            type="text"
+            placeholder="판매 가격을 입력해주세요"
+            {...register("price", { required: true })}
+          />
           {errors.price && <span>This field is required</span>}
         </fieldset>
 
         <fieldset>
           <label>태그</label>
-          <input type="text" {...register("tags")} />
+          <input
+            type="text"
+            placeholder="태그를 입력해주세요"
+            {...register("tags", { required: true })}
+          />
         </fieldset>
       </form>
     </main>
