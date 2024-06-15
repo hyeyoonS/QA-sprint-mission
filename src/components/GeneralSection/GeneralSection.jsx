@@ -5,6 +5,7 @@ import SearchBar from "components/searchBar/SearchBar";
 import Button from "components/button/Button";
 import SortButton from "components/button/SortButton";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const GeneralSection = ({ cards, onSearch }) => {
   const [sortOption, setSortOption] = useState("최신순");
@@ -29,7 +30,9 @@ const GeneralSection = ({ cards, onSearch }) => {
         <div className="title_contents">
           <SearchBar onSearch={handleSearch} isSearched={isSearched} />
           <div className="mobile_container">
-            <Button color="blue">상품 등록하기</Button>
+            <Link to="/registration">
+              <Button color="blue">상품 등록하기</Button>
+            </Link>
             <SortButton onSortChange={handleSortChange}>
               {sortOption}
             </SortButton>
