@@ -28,4 +28,20 @@ async function getBestProducts(path) {
   }
 }
 
+export async function postProducts(formData) {
+  try {
+    const res = await fetch(`${BASE_URL}/products`, {
+      method: "POST",
+      body: formData,
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    const body = await res.json();
+    return body;
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw error;
+  }
+}
 export { getProducts, getBestProducts };
