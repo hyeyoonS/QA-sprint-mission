@@ -25,11 +25,18 @@ h1 {
   align-items: center;
 }
 
-form {
-  width: 100%;
+.registration_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2.4rem;
+  margin: 0 auto;
+  max-width: 120rem;
+  align-items: center;
 }
 
 fieldset {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: none;
@@ -62,7 +69,7 @@ textarea {
   line-height: 24px;
 }
 
-input {
+.register_input {
   width: 100%;
   display: flex;
   padding: 1.6rem 2.4rem;
@@ -82,3 +89,23 @@ input::placeholder,
 textarea::placeholder {
   color: var(--Cool-Gray400);
 }
+
+input:focus {
+  outline: none;
+}
+
+.error {
+  /* border: 1px solid var(--error-red); */
+  font-size: 1.5rem;
+  color: var(--error-\red);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+
+/* .error-message {
+  color: var(--error-\red);
+  font-size: 1.5rem;
+  font-weight: 600;
+} */
