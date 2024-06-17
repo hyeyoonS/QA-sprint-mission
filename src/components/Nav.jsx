@@ -24,7 +24,7 @@ const Nav = () => {
             중고마켓
           </a>
         </div>
-        <a className="login_btn" href="/pages/signin.html">
+        <a className="login_btn" href="/login">
           로그인
         </a>
       </div>
