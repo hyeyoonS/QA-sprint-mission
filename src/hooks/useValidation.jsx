@@ -18,7 +18,7 @@ const useValidation = () => {
         }
         break;
       case "price":
-        if (!/^\d+$/.test(value) || value.length < 1 || value.length > 100) {
+        if (isNaN(value) || value.length < 1) {
           error = `${ERROR_MESSAGES.price}`;
         }
         break;
