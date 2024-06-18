@@ -12,6 +12,7 @@ function Registration() {
     register,
     handleSubmit,
     setValue,
+    trigger,
     formState: { errors: formErrors },
   } = useForm();
 
@@ -79,7 +80,9 @@ function Registration() {
       <fieldset>
         <label>상품 이미지</label>
         <input
-          className={styles.register_input}
+          className={`${styles.register_input} ${
+            formErrors.image ? styles.input_error : ""
+          }`}
           type="file"
           {...register("image", { required: true })}
           onBlur={handleBlur}
@@ -92,7 +95,9 @@ function Registration() {
       <fieldset>
         <label>상품명</label>
         <input
-          className={styles.register_input}
+          className={`${styles.register_input} ${
+            formErrors.name ? styles.input_error : ""
+          }`}
           type="text"
           placeholder="상품명을 입력해주세요"
           {...register("name", { required: true })}
@@ -108,6 +113,7 @@ function Registration() {
       <fieldset>
         <label>상품 소개</label>
         <textarea
+          className={`${formErrors.description ? styles.input_error : ""}`}
           placeholder="상품 소개를 입력해주세요"
           {...register("description", { required: true })}
           onBlur={handleBlur}
@@ -124,7 +130,9 @@ function Registration() {
       <fieldset>
         <label>판매가격</label>
         <input
-          className={styles.register_input}
+          className={`${styles.register_input} ${
+            formErrors.price ? styles.input_error : ""
+          }`}
           type="text"
           placeholder="판매 가격을 입력해주세요"
           {...register("price", { required: true })}
@@ -142,7 +150,9 @@ function Registration() {
       <fieldset>
         <label>태그</label>
         <input
-          className={styles.register_input}
+          className={`${styles.register_input} ${
+            formErrors.tags ? styles.input_error : ""
+          }`}
           type="text"
           placeholder="태그를 입력해주세요"
           onKeyDown={handleTagKeyPress}

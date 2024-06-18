@@ -71,7 +71,7 @@ textarea {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  border: none;
+  border: 1px solid var(--Cool-Gray100);
   border-radius: 1.2rem;
   background: var(--Cool-Gray100);
 
@@ -87,7 +87,7 @@ textarea {
   padding: 1.6rem 2.4rem;
   align-items: flex-start;
   gap: 1rem;
-  border: none;
+  border: 1px solid var(--Cool-Gray100);
   border-radius: 1.2rem;
   background: var(--Cool-Gray100);
 
@@ -102,18 +102,23 @@ textarea::placeholder {
   color: var(--Cool-Gray400);
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
 .error {
-  /* border: 1px solid var(--error-red); */
   font-size: 1.5rem;
-  color: var(--error-\red);
+  color: var(--error-red);
   font-size: 1.5rem;
   font-weight: 600;
   padding-left: 16px;
   padding-top: 8px;
+}
+
+.input_error {
+  border-inline: 1px solid var(--error-red);
+  border-color: var(--error-red);
 }
 
 /* .error-message {
