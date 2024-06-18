@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <nav role="navigation">
       <div className={styles.header_nav}>
-        <img src={logo} aria-label="판다마켓로고" className="nav_logo" />
+        <img src={logo} aria-label="판다마켓로고" className={styles.nav_logo} />
 
         {/* 모바일용 */}
         <img

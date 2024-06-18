@@ -7,7 +7,7 @@ export default function SearchBar({ onSearch, isSearched }) {
 
   return (
     <form
-      className={styles.search_form}
+      className={styles.form_search}
       onSubmit={(e) => {
         e.preventDefault();
         onSearch(searchTerm);

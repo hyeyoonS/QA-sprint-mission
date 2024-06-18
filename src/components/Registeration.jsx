@@ -68,10 +68,7 @@ function Registration() {
   };
 
   return (
-    <form
-      className={styles.registration_container}
-      onSubmit={handleSubmit(onSubmit)}
-    >
+    <form className={styles.form_container} onSubmit={handleSubmit(onSubmit)}>
       <section className={styles.registration_title}>
         <h1>상품 등록하기</h1>
         <Button color="blue" type="submit">
