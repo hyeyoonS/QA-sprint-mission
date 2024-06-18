@@ -5,6 +5,7 @@ import { postProducts, postImage } from "../utils/api";
 import { ERROR_MESSAGES } from "../utils/error_constants";
 import useValidation from "../hooks/useValidation";
 import styles from "./Registeration.module.css";
+import TagList from "./TagList/TagList";
 
 function Registration() {
   const {
@@ -148,16 +149,11 @@ function Registration() {
           {...register("tags")}
           onBlur={handleBlur}
         />
-        {tags.map((tag, index) => (
-          <div key={index} className={styles.tag_item}>
-            {tag}
-          </div>
-        ))}
-        {(formErrors.tags || validationErrors.tags) && (
-          <span className={styles.error}>
-            {formErrors.tags ? formErrors.tags.message : validationErrors.tags}
-          </span>
-        )}
+        <TagList
+          tags={tags}
+          formErrors={formErrors}
+          validationErrors={validationErrors}
+        />
       </fieldset>
     </form>
   );
