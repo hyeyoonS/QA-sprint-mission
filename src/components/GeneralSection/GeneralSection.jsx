@@ -1,5 +1,5 @@
 import React from "react";
-import "./GeneralSection.css";
+import styles from "./GeneralSection.module.css";
 import CardList from "components/GeneralSection/CardList";
 import SearchBar from "components/searchBar/SearchBar";
 import Button from "components/button/Button";
@@ -24,12 +24,12 @@ const GeneralSection = ({ cards, onSearch }) => {
   };
 
   return (
-    <section className="general_section_container">
-      <div className="title_bar">
-        <p className="title">판매 중인 상품</p>
-        <div className="title_contents">
+    <section className={styles.general_section_container}>
+      <div className={styles.title_bar}>
+        <p className={styles.title}>판매 중인 상품</p>
+        <div className={styles.title_contents}>
           <SearchBar onSearch={handleSearch} isSearched={isSearched} />
-          <div className="mobile_container">
+          <div className={styles.mobile_container}>
             <Link to="/registration">
               <Button color="blue">상품 등록하기</Button>
             </Link>

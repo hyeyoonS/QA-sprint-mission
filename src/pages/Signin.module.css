@@ -1,4 +1,4 @@
-body {
+/* body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,16 +23,16 @@ header {
   align-items: center;
 }
 
-.title-logo {
+.title_logo {
   width: 39.6rem;
   height: 13.2rem;
 }
 
-.title-logo img {
+.title_logo img {
   width: 100%;
 }
 
-.title-subtext {
+.title_subtext {
   margin-top: 1.2rem;
 
   text-align: center;
@@ -72,7 +72,7 @@ button {
   font-weight: 600;
 }
 
-.input-container {
+.input_container {
   width: 100%;
   margin-top: 1.6rem;
 }
@@ -104,7 +104,7 @@ input:focus {
   position: relative;
 }
 
-.input-eye-off {
+.input_eye_off {
   right: 1.5rem;
   position: absolute;
   display: flex;
@@ -112,7 +112,7 @@ input:focus {
   justify-content: center;
 }
 
-.another-signup {
+.another_signup {
   margin: 1.2rem 0;
   display: flex;
   flex-direction: row;
@@ -124,7 +124,7 @@ input:focus {
   background-color: #e6f2ff;
 }
 
-.another-signup-logo {
+.another_signup_logo {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -132,7 +132,7 @@ input:focus {
   gap: 1.6rem;
 }
 
-.another-signup-text {
+.another_signup_text {
   text-decoration: solid;
   background-color: #e7effb;
   font-size: 1.4rem;
@@ -141,4 +141,4 @@ input:focus {
 .deco_text {
   text-decoration-line: underline;
   color: var(--Brand-Blue);
-}
+} */

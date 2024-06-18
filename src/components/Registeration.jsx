@@ -4,7 +4,7 @@ import Button from "./button/Button";
 import { postProducts, postImage } from "../utils/api";
 import { ERROR_MESSAGES } from "../utils/error_constants";
 import useValidation from "../hooks/useValidation";
-import "./Registeration.css";
+import styles from "./Registeration.module.css";
 
 function Registration() {
   const {
@@ -68,8 +68,11 @@ function Registration() {
   };
 
   return (
-    <form className="registration_container" onSubmit={handleSubmit(onSubmit)}>
-      <section className="registration_title">
+    <form
+      className={styles.registration_container}
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <section className={styles.registration_title}>
         <h1>상품 등록하기</h1>
         <Button color="blue" type="submit">
           등록
@@ -78,27 +81,27 @@ function Registration() {
       <fieldset>
         <label>상품 이미지</label>
         <input
-          className="register_input"
+          className={styles.register_input}
           type="file"
           {...register("image", { required: true })}
           onBlur={handleBlur}
         />
         {formErrors.image && (
-          <span className="error">{ERROR_MESSAGES.image}</span>
+          <span className={styles.error}>{ERROR_MESSAGES.image}</span>
         )}
       </fieldset>
 
       <fieldset>
         <label>상품명</label>
         <input
-          className="register_input"
+          className={styles.register_input}
           type="text"
           placeholder="상품명을 입력해주세요"
           {...register("name", { required: true })}
           onBlur={handleBlur}
         />
         {(formErrors.name || validationErrors.name) && (
-          <span className="error">
+          <span className={styles.error}>
             {formErrors.name ? formErrors.name.message : validationErrors.name}
           </span>
         )}
@@ -112,7 +115,7 @@ function Registration() {
           onBlur={handleBlur}
         ></textarea>
         {(formErrors.description || validationErrors.description) && (
-          <span className="error">
+          <span className={styles.error}>
             {formErrors.description
               ? formErrors.description.message
               : validationErrors.description}
@@ -123,14 +126,14 @@ function Registration() {
       <fieldset>
         <label>판매가격</label>
         <input
-          className="register_input"
+          className={styles.register_input}
           type="text"
           placeholder="판매 가격을 입력해주세요"
           {...register("price", { required: true })}
           onBlur={handleBlur}
         />
         {(formErrors.price || validationErrors.price) && (
-          <span className="error">
+          <span className={styles.error}>
             {formErrors.price
               ? formErrors.price.message
               : validationErrors.price}
@@ -141,7 +144,7 @@ function Registration() {
       <fieldset>
         <label>태그</label>
         <input
-          className="register_input"
+          className={styles.register_input}
           type="text"
           placeholder="태그를 입력해주세요"
           onKeyDown={handleTagKeyPress}
@@ -149,12 +152,12 @@ function Registration() {
           onBlur={handleBlur}
         />
         {tags.map((tag, index) => (
-          <div key={index} className="tag_item">
+          <div key={index} className={styles.tag_item}>
             {tag}
           </div>
         ))}
         {(formErrors.tags || validationErrors.tags) && (
-          <span className="error">
+          <span className={styles.error}>
             {formErrors.tags ? formErrors.tags.message : validationErrors.tags}
           </span>
         )}

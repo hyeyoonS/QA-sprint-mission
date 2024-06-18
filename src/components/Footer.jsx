@@ -1,4 +1,4 @@
-import "./Footer.css";
+import styles from "./Footer.module.css";
 import facebook from "../assets/svg/facebook-icon.svg";
 import instagram from "../assets/svg/instagram-icon.svg";
 import twitter from "../assets/svg/twitter-icon.svg";
@@ -21,18 +21,18 @@ const FooterSns = ({ href, src, alt }) => {
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-container">
-        <div className="copyright">©codeit - 2024</div>
-        <div className="explain">
-          <a className="policy" href="./privacy.html">
+    <div className={styles.footer}>
+      <div className={styles.footer_container}>
+        <div className={styles.copyright}>©codeit - 2024</div>
+        <div className={styles.explain}>
+          <a className={styles.policy} href="./privacy.html">
             privacy policy
           </a>
-          <a className="faq" href="./faq.html">
+          <a className={styles.faq} href="./faq.html">
             FAQ
           </a>
         </div>
-        <div className="footer-sns">
+        <div className={styles.footer_sns}>
           {SnsLogo.map((sns) => (
             <FooterSns key={sns.alt} {...sns} />
           ))}
