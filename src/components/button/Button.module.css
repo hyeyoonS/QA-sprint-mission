@@ -21,3 +21,7 @@
 .btn.blue {
   background-color: var(--Brand-Blue);
 }
+
+.btn.blue:disabled {
+  background-color: var(--Cool-Gray400);
+}

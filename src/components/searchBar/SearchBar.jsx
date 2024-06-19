@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SearchBar.css";
+import styles from "./SearchBar.module.css";
 import searchIcon from "../../assets/svg/search-icon.svg";
 
 export default function SearchBar({ onSearch, isSearched }) {
@@ -7,18 +7,18 @@ export default function SearchBar({ onSearch, isSearched }) {
 
   return (
     <form
+      className={styles.form_search}
       onSubmit={(e) => {
         e.preventDefault();
         onSearch(searchTerm);
         isSearched();
       }}
     >
-      <fieldset className="search_wrapper">
+      <fieldset className={styles.search_wrapper}>
         <img src={searchIcon} alt="검색 아이콘" />
-        <label className="a11y" htmlFor="searchInput"></label>
         <input
           id="searchInput"
-          className="search_input"
+          className={styles.search_input}
           type="text"
           placeholder="검색할 상품을 입력해주세요."
           aria-label="검색어를 입력하는 입력 요소입니다."

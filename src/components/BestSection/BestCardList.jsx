@@ -1,5 +1,5 @@
 import React from "react";
-import "./BestCardList.css";
+import styles from "./BestCardList.module.css";
 import BestCards from "./BestCards";
 
 const BestCardList = ({ bestCards, sortOption }) => {
@@ -13,7 +13,7 @@ const BestCardList = ({ bestCards, sortOption }) => {
   });
 
   return (
-    <div className="best_card_list">
+    <div className={styles.best_card_list}>
       {sortedCards.map((bestCards) => (
         <BestCards value={bestCards} key={bestCards.id} />
       ))}
